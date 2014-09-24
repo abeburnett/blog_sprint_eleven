@@ -13,6 +13,8 @@
   %p
     %strong Comment:
     = comment.body
+  %p
+    = link_to 'Delete Comment', [comment.post, comment], method: :delete
 
 %h3 Add Comment
 = form_for [@post, @post.comments.build] do |f|
